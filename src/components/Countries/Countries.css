@@ -73,6 +73,7 @@
 
 .btn-color {
     background-color: rgb(83, 151, 241);
+    z-index: 200;
     
 }
 
