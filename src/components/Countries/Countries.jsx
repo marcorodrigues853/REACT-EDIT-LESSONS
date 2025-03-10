@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './Countries.css';
 import CountryCard from './CountryCard';
@@ -47,6 +47,24 @@ function Countries() {
         bandeira: '',
         capital: '',
     });
+
+    useEffect(() => {
+        console.log('UseEffect sem dependcias');
+
+        // ccrre sempre que o componente é actualizado
+    });
+
+    useEffect(() => {
+        console.log('UseEffect com array/dependencias vazio');
+
+        // corre seuma vez quando o componente é criado
+    }, []);
+
+    useEffect(() => {
+        console.log('UseEffect com dependencias de lista de paises');
+
+        // corre seuma vez quando o componente é criado
+    }, [listaPaises]);
 
     // USetate spor cada campo
 
