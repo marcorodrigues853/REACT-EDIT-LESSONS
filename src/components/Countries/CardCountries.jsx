@@ -4,6 +4,8 @@ import { Link } from "react-router";
 function CardCountries({ country }) {
   const [isSelected, setIsSelected] = useState(false);
 
+
+  console.log('country inais' ,country)
   return (
     <div style={{ display: "grid", gap: "12px" }}>
       <Link to={`/country/${country.name.common}`}>
@@ -14,7 +16,7 @@ function CardCountries({ country }) {
           <img className="flag" src={country.flags.png} />
           <h2>{country.name.common}</h2>
           <p>
-            <strong>Country:</strong> {country.capital?.[0] || "sem capital"}
+            <strong>Country capital:</strong> {country.capital?.[0] || "sem capital"}
           </p>
           {/* <pre>JSON.stringify{(country.languages)}</pre> */}
           <p>
